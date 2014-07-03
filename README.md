@@ -8,22 +8,11 @@ Installation
 
 On Ubuntu 12.04 LTS:
 
-    # Install virtualenvwrapper
-    sudo apt-get install virtualenvwrapper
-    source ~/.bashrc
-
-    # Make a virtualenv for planet-notes-dump
-    mkvirtualenv --no-site-packages planet-notes-dump
-
     # Install prerequisites for planet-notes-dump
-    sudo apt-get install build-essential python-dev libxml2-dev libxslt-dev
-    pip install -r requirements.txt
+    sudo apt-get install python-psycopg2 python-lxml
 
 Running
 -------
-
-    # Use your virtualenv
-    use planet-notes-dump
 
     # Execute the initial dump
     python dump.py --database openstreetmap --username foo notes_dump.xml
